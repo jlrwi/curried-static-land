@@ -1,0 +1,10 @@
+{
+  "name": "curried-static-land",
+  "version": "1.0.0",
+  "description": "Curried derivative of Static Land specification",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonathan Reimer",
+  "license": "ISC"
+}
