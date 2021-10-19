@@ -8,11 +8,11 @@ I try to follow Crockford's encouragement to program in Javascript by studiously
 
 ## Static Land
 
-I am implementing a curried variation of the [Static Land](https://github.com/fantasyland/static-land) specification, which is attractive because it separates data from methods. (a practice Crockford has advocated.) In my experiment, each algebraic type constructor exports a factory function for creating a curried Static Land-compliant type module.
+I am implementing a curried variation of the [Static Land](https://github.com/fantasyland/static-land) specification, which is attractive because it separates data from methods. (a practice Crockford has advocated) In my experiment, each algebraic type constructor exports a factory function for creating a curried Static Land-compliant type module.
 
 ## Sanctuary
 
-I learned about implementing different algebras from studying [Sanctuary](https://github.com/sanctuary-js/sanctuary).
+I learned about implementing different algebras in Javascript by studying [Sanctuary](https://github.com/sanctuary-js/sanctuary).
 
 ## Bartosz Milewski
 
@@ -21,7 +21,7 @@ His series of [Category Theory lectures](https://www.youtube.com/user/DrBartosz)
 # Conventions
 
 ## Currying
-All functions are manually curried and unary. The one exception is functions that are called with this form:
+All functions are manually curried and unary. The one exception is functions called with this form:
 ```javascript
 f (value, err)        
 ```
@@ -29,7 +29,7 @@ f (value, err)
 This style of function call is technically unary because it either has a value or an err, but cannot have both. In fact, this form is essentially an Either algebraic data type.
 
 ## Spacing
-Sanctuary has recently adopted a style of currying where (unary) functions are called as follows:
+Sanctuary has recently adopted a coding style where (unary) functions are called as follows:
 ```javascript
 f (x) (y)
 ```
@@ -52,9 +52,9 @@ Factory functions that return type modules always take at least one curried argu
 ## Additional methods
 
 In addition to the Static Land methods, each type module contains:
-* A .create() method which can be used to create an instance of the data type. For some applicatives this will be synonymous with the .of() method, but for others (such as pair) it may be a non-rule-compliant function. This method should not do any validation of the input.
-* A .validate() method which returns a boolean reflecting whether a value is a valid instance of that type
-* Types that satisfy Semigroup/Applicative should also have an .append() method
+* A `.create()` method which can be used to create an instance of the data type. For some applicatives this will be synonymous with the .of() method, but for others (such as pair) it may be a non-rule-compliant function. This method should not do any validation of the input.
+* A `.validate()` method which returns a boolean reflecting whether a value is a valid instance of that type
+* Types that satisfy Semigroup/Applicative should also have an `.append()` method
 
 ## Properties
 
