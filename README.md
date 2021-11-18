@@ -30,6 +30,7 @@ This style of function call is technically unary because it either has a value o
 
 ## Spacing
 Update (11/17/21): I have abandoned Sanctuary-style spacing as unnecessary as described below.
+
 Sanctuary has recently adopted a coding style where (unary) functions are called as follows:
 ```javascript
 f (x) (y)
