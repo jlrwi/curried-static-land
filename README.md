@@ -4,7 +4,7 @@ This project is a work-in-progress for my own education and experimentation. It 
 
 ## Douglas Crockford
 
-I try to follow Crockford's encouragement to program in Javascript by studiously avoiding its "bad parts". Although his [JSLint](http://jslint.com/) tool is inflexible and opinionated, I write so that all code passes it successfully with the provisional exception of the spacing style Sanctuary adopts for function calls (see [below](#spacing)).
+I try to follow Crockford's encouragement to program in Javascript by studiously avoiding its "bad parts". Although his [JSLint](http://jslint.com/) tool is inflexible and opinionated, I write so that all code passes it successfully ~~with the provisional exception of the spacing style Sanctuary adopts for function calls (see [below](#spacing))~~.
 
 ## Static Land
 
@@ -29,6 +29,7 @@ f (value, err)
 This style of function call is technically unary because it either has a value or an err, but cannot have both. In fact, this form is essentially an Either algebraic data type.
 
 ## Spacing
+Update (11/17/21): I have abandoned Sanctuary-style spacing as unnecessary as described below.
 Sanctuary has recently adopted a coding style where (unary) functions are called as follows:
 ```javascript
 f (x) (y)
@@ -41,7 +42,6 @@ f(
     compose(x)(y)
 )
 ```
-Although I initially adopted Sanctuary's style, I am lately preferring the use of more line breaks.
 
 ## Factory functions
 Factory functions that return type modules always take at least one curried argument:
@@ -54,7 +54,10 @@ Factory functions that return type modules always take at least one curried argu
 In addition to the Static Land methods, each type module contains:
 * A `.create()` method which can be used to create an instance of the data type. For some applicatives this will be synonymous with the .of() method, but for others (such as pair) it may be a non-rule-compliant function. This method should not do any validation of the input.
 * A `.validate()` method which returns a boolean reflecting whether a value is a valid instance of that type
-* Types that satisfy Semigroup/Applicative should also have an `.append()` method
+* Types that satisfy Semigroup/Applicative should also have:
+    - an `.append()` method
+    - a `.get()` method
+    - a `.set()` method
 
 ## Properties
 
