@@ -2,6 +2,8 @@
   "name": "curried-static-land",
   "version": "1.1.0",
   "description": "Curried derivative of Static Land specification",
+  "homepage": "https://github.com/jlrwi/curried-static-land",
+  "repository": "github:jlrwi/curried-static-land",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
